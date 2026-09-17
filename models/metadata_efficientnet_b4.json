@@ -1,0 +1,9 @@
+{
+  "backbone": "efficientnet_b4",
+  "timestamp": 1789512238,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.9070735090152566,
+  "val_f1": 0.9072350565084587,
+  "train_loss": 0.007603881957519027
+}

@@ -1,0 +1,9 @@
+{
+  "backbone": "convnext_tiny",
+  "timestamp": 1789608786,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.8252427184466019,
+  "val_f1": 0.8252782313427405,
+  "train_loss": 0.003932195346591607
+}

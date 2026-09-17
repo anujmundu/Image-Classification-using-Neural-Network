@@ -1,0 +1,9 @@
+{
+  "backbone": "swin_t",
+  "timestamp": 1789622130,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.059639389736477116,
+  "val_f1": 0.023623689299630324,
+  "train_loss": 3.701368079995209
+}

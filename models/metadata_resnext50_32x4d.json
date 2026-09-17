@@ -1,0 +1,9 @@
+{
+  "backbone": "resnext50_32x4d",
+  "timestamp": 1789616556,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.8058252427184466,
+  "val_f1": 0.8030910910541403,
+  "train_loss": 0.006774622863510026
+}

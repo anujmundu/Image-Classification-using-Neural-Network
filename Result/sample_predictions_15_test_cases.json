@@ -1,0 +1,362 @@
+[
+  {
+    "sample_id": 6,
+    "filename": "Subject_6.jpg",
+    "sample_name": "sample_6_bear.jpg",
+    "ground_truth": "bear",
+    "efficientnet_prediction": "bear",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "bear",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "dog",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "goldfish",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "bear",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 7,
+    "filename": "Subject_7.jpg",
+    "sample_name": "sample_7_binoculars.jpg",
+    "ground_truth": "binoculars",
+    "efficientnet_prediction": "binoculars",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "binoculars",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "butterfly",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "dumb-bell",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "binoculars",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 8,
+    "filename": "Subject_8.jpg",
+    "sample_name": "sample_8_blimp.jpg",
+    "ground_truth": "blimp",
+    "efficientnet_prediction": "blimp",
+    "efficientnet_confidence_pct": 99.67,
+    "efficientnet_top3": [
+      {
+        "class": "blimp",
+        "prob_pct": 99.67
+      },
+      {
+        "class": "canoe",
+        "prob_pct": 0.26
+      },
+      {
+        "class": "hot-dog",
+        "prob_pct": 0.03
+      }
+    ],
+    "resnet101_prediction": "bowling-ball",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 9,
+    "filename": "Subject_9.jpg",
+    "sample_name": "sample_9_bonsai.jpg",
+    "ground_truth": "bonsai-101",
+    "efficientnet_prediction": "bonsai-101",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "bonsai-101",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "butterfly",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "jesus-christ",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "bonsai-101",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 10,
+    "filename": "Subject_10.jpg",
+    "sample_name": "sample_10_bulldozer.jpg",
+    "ground_truth": "bulldozer",
+    "efficientnet_prediction": "bulldozer",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "bulldozer",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "cactus",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "hot-dog",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "bulldozer",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 11,
+    "filename": "Subject_11.jpg",
+    "sample_name": "sample_11_cactus.jpg",
+    "ground_truth": "cactus",
+    "efficientnet_prediction": "cactus",
+    "efficientnet_confidence_pct": 99.99,
+    "efficientnet_top3": [
+      {
+        "class": "cactus",
+        "prob_pct": 99.99
+      },
+      {
+        "class": "leopards-101",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "bonsai-101",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "bowling-ball",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 12,
+    "filename": "Subject_12.jpg",
+    "sample_name": "sample_12_camel.jpg",
+    "ground_truth": "camel",
+    "efficientnet_prediction": "camel",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "camel",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "giraffe",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "bulldozer",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "camel",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 13,
+    "filename": "Subject_13.jpg",
+    "sample_name": "sample_13_canoe.jpg",
+    "ground_truth": "canoe",
+    "efficientnet_prediction": "canoe",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "canoe",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "golden-gate-bridge",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "elk",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "canoe",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 14,
+    "filename": "Subject_14.jpg",
+    "sample_name": "sample_14_dog.jpg",
+    "ground_truth": "dog",
+    "efficientnet_prediction": "horse",
+    "efficientnet_confidence_pct": 36.73,
+    "efficientnet_top3": [
+      {
+        "class": "horse",
+        "prob_pct": 36.73
+      },
+      {
+        "class": "people",
+        "prob_pct": 18.44
+      },
+      {
+        "class": "hot-dog",
+        "prob_pct": 9.86
+      }
+    ],
+    "resnet101_prediction": "coffin",
+    "status": "MISCLASSIFIED"
+  },
+  {
+    "sample_id": 15,
+    "filename": "Subject_15.jpg",
+    "sample_name": "sample_15_golden_gate_bridge.jpg",
+    "ground_truth": "golden-gate-bridge",
+    "efficientnet_prediction": "golden-gate-bridge",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "golden-gate-bridge",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "horse",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "soda-can",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "golden-gate-bridge",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 16,
+    "filename": "Subject_16.jpg",
+    "sample_name": "sample_16_goldfish.jpg",
+    "ground_truth": "goldfish",
+    "efficientnet_prediction": "goldfish",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "goldfish",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "cactus",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "hummingbird",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "goldfish",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 17,
+    "filename": "Subject_17.jpg",
+    "sample_name": "sample_17_grand_piano.jpg",
+    "ground_truth": "grand-piano-101",
+    "efficientnet_prediction": "grand-piano-101",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "grand-piano-101",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "harpsichord",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "harp",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "grand-piano-101",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 18,
+    "filename": "Subject_18.jpg",
+    "sample_name": "sample_18_horse.jpg",
+    "ground_truth": "horse",
+    "efficientnet_prediction": "horse",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "horse",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "elk",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "dog",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "horse",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 19,
+    "filename": "Subject_19.jpg",
+    "sample_name": "sample_19_hummingbird.jpg",
+    "ground_truth": "hummingbird",
+    "efficientnet_prediction": "hummingbird",
+    "efficientnet_confidence_pct": 99.99,
+    "efficientnet_top3": [
+      {
+        "class": "hummingbird",
+        "prob_pct": 99.99
+      },
+      {
+        "class": "goldfish",
+        "prob_pct": 0.01
+      },
+      {
+        "class": "screwdriver",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "hummingbird",
+    "status": "CORRECT"
+  },
+  {
+    "sample_id": 20,
+    "filename": "Subject_20.jpg",
+    "sample_name": "sample_20_zebra.jpg",
+    "ground_truth": "zebra",
+    "efficientnet_prediction": "zebra",
+    "efficientnet_confidence_pct": 100.0,
+    "efficientnet_top3": [
+      {
+        "class": "zebra",
+        "prob_pct": 100.0
+      },
+      {
+        "class": "butterfly",
+        "prob_pct": 0.0
+      },
+      {
+        "class": "goose",
+        "prob_pct": 0.0
+      }
+    ],
+    "resnet101_prediction": "zebra",
+    "status": "CORRECT"
+  }
+]

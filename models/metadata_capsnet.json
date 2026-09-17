@@ -1,0 +1,9 @@
+{
+  "backbone": "capsnet",
+  "timestamp": 1789571483,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.2260748959778086,
+  "val_f1": 0.19936734522406396,
+  "train_loss": 2.818242716339399
+}

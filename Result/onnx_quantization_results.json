@@ -1,0 +1,20 @@
+{
+  "model": "EfficientNet-B4",
+  "pytorch_fp32": {
+    "size_mb": 68.02,
+    "latency_ms": 56.92,
+    "fps": 17.6
+  },
+  "onnx_fp32": {
+    "size_mb": 67.19,
+    "latency_ms": 18.92,
+    "fps": 52.8
+  },
+  "onnx_int8": {
+    "size_mb": 17.56,
+    "latency_ms": 447.34,
+    "fps": 2.2
+  },
+  "size_reduction_pct": 74.2,
+  "speedup_onnx_fp32_vs_pytorch": 3.01
+}

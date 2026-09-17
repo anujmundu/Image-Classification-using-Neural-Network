@@ -1,0 +1,30 @@
+[
+  {
+    "model": "EfficientNet-B4",
+    "type": "Standalone",
+    "top1_acc": 90.79837618403248,
+    "top5_acc": 98.51150202976996,
+    "macro_f1": 90.87532198378564
+  },
+  {
+    "model": "ResNet-101",
+    "type": "Standalone",
+    "top1_acc": 80.37889039242219,
+    "top5_acc": 95.2638700947226,
+    "macro_f1": 80.62573424714856
+  },
+  {
+    "model": "ViT-Small",
+    "type": "Standalone",
+    "top1_acc": 37.34776725304466,
+    "top5_acc": 66.5764546684709,
+    "macro_f1": 36.9083576843958
+  },
+  {
+    "model": "Soft-Voting Ensemble (EffNet + ResNet + ViT)",
+    "type": "Ensemble",
+    "top1_acc": 90.66305818673884,
+    "top5_acc": 98.91745602165088,
+    "macro_f1": 90.73274266190283
+  }
+]

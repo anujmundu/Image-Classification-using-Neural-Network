@@ -1,0 +1,9 @@
+{
+  "backbone": "shufflenet_v2_x1_0",
+  "timestamp": 1789610661,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.7947295423023578,
+  "val_f1": 0.7946293828047282,
+  "train_loss": 0.03274396153272323
+}

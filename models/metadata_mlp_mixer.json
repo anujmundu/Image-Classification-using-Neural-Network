@@ -1,0 +1,9 @@
+{
+  "backbone": "mlp_mixer",
+  "timestamp": 1789523943,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.2787794729542302,
+  "val_f1": 0.26631018950160495,
+  "train_loss": 1.8722566287472564
+}

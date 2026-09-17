@@ -1,0 +1,9 @@
+{
+  "backbone": "densenet121",
+  "timestamp": 1789606445,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.812760055478502,
+  "val_f1": 0.8140282953487267,
+  "train_loss": 0.011326146751361073
+}

@@ -1,0 +1,9 @@
+{
+  "backbone": "resnet101",
+  "timestamp": 1789516200,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.812760055478502,
+  "val_f1": 0.809899497548371,
+  "train_loss": 0.005338722760876957
+}

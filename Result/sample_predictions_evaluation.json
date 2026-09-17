@@ -1,0 +1,471 @@
+{
+  "total_samples": 20,
+  "efficientnet_b4_accuracy_pct": 95.0,
+  "mobilenet_v3_large_accuracy_pct": 90.0,
+  "soft_voting_ensemble_accuracy_pct": 95.0,
+  "avg_latency_pytorch_effnet_ms": 65.48,
+  "avg_latency_ensemble_ms": 242.9,
+  "avg_latency_onnx_ms": 28.24,
+  "detailed_predictions": [
+    {
+      "sample_id": 1,
+      "filename": "sample_1_butterfly.jpg",
+      "ground_truth": "butterfly",
+      "efficientnet_b4": {
+        "prediction": "butterfly",
+        "confidence_pct": 99.95,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "butterfly",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "butterfly",
+        "confidence_pct": 84.38,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "butterfly",
+        "confidence_pct": 99.95
+      }
+    },
+    {
+      "sample_id": 2,
+      "filename": "sample_2_leopard.jpg",
+      "ground_truth": "leopards-101",
+      "efficientnet_b4": {
+        "prediction": "leopards-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "leopards-101",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "leopards-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "leopards-101",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 3,
+      "filename": "sample_3_motorbike.jpg",
+      "ground_truth": "motorbikes-101",
+      "efficientnet_b4": {
+        "prediction": "motorbikes-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "motorbikes-101",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "motorbikes-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "motorbikes-101",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 4,
+      "filename": "sample_4_school_bus.jpg",
+      "ground_truth": "school-bus",
+      "efficientnet_b4": {
+        "prediction": "school-bus",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "school-bus",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "school-bus",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "school-bus",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 5,
+      "filename": "sample_5_backpack.jpg",
+      "ground_truth": "backpack",
+      "efficientnet_b4": {
+        "prediction": "backpack",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "backpack",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "backpack",
+        "confidence_pct": 99.77,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "backpack",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 6,
+      "filename": "sample_6_bear.jpg",
+      "ground_truth": "bear",
+      "efficientnet_b4": {
+        "prediction": "bear",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "bear",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "bear",
+        "confidence_pct": 99.89,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "bear",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 7,
+      "filename": "sample_7_binoculars.jpg",
+      "ground_truth": "binoculars",
+      "efficientnet_b4": {
+        "prediction": "binoculars",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "binoculars",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "binoculars",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "binoculars",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 8,
+      "filename": "sample_8_blimp.jpg",
+      "ground_truth": "blimp",
+      "efficientnet_b4": {
+        "prediction": "blimp",
+        "confidence_pct": 99.68,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "blimp",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "blimp",
+        "confidence_pct": 71.94,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "blimp",
+        "confidence_pct": 99.69
+      }
+    },
+    {
+      "sample_id": 9,
+      "filename": "sample_9_bonsai.jpg",
+      "ground_truth": "bonsai-101",
+      "efficientnet_b4": {
+        "prediction": "bonsai-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "bonsai-101",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "bonsai-101",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "bonsai-101",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 10,
+      "filename": "sample_10_bulldozer.jpg",
+      "ground_truth": "bulldozer",
+      "efficientnet_b4": {
+        "prediction": "bulldozer",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "bulldozer",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "bulldozer",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "bulldozer",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 11,
+      "filename": "sample_11_cactus.jpg",
+      "ground_truth": "cactus",
+      "efficientnet_b4": {
+        "prediction": "cactus",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "bonsai-101",
+        "correct": false
+      },
+      "soft_voting_ensemble": {
+        "prediction": "cactus",
+        "confidence_pct": 54.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "cactus",
+        "confidence_pct": 99.99
+      }
+    },
+    {
+      "sample_id": 12,
+      "filename": "sample_12_camel.jpg",
+      "ground_truth": "camel",
+      "efficientnet_b4": {
+        "prediction": "camel",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "camel",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "camel",
+        "confidence_pct": 99.36,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "camel",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 13,
+      "filename": "sample_13_canoe.jpg",
+      "ground_truth": "canoe",
+      "efficientnet_b4": {
+        "prediction": "canoe",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "canoe",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "canoe",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "canoe",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 14,
+      "filename": "sample_14_dog.jpg",
+      "ground_truth": "dog",
+      "efficientnet_b4": {
+        "prediction": "horse",
+        "confidence_pct": 36.59,
+        "correct": false
+      },
+      "mobilenet_v3_large": {
+        "prediction": "horse",
+        "correct": false
+      },
+      "soft_voting_ensemble": {
+        "prediction": "horse",
+        "confidence_pct": 26.8,
+        "correct": false
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "horse",
+        "confidence_pct": 36.42
+      }
+    },
+    {
+      "sample_id": 15,
+      "filename": "sample_15_golden_gate_bridge.jpg",
+      "ground_truth": "golden-gate-bridge",
+      "efficientnet_b4": {
+        "prediction": "golden-gate-bridge",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "golden-gate-bridge",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "golden-gate-bridge",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "golden-gate-bridge",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 16,
+      "filename": "sample_16_goldfish.jpg",
+      "ground_truth": "goldfish",
+      "efficientnet_b4": {
+        "prediction": "goldfish",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "goldfish",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "goldfish",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "goldfish",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 17,
+      "filename": "sample_17_grand_piano.jpg",
+      "ground_truth": "grand-piano-101",
+      "efficientnet_b4": {
+        "prediction": "grand-piano-101",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "grand-piano-101",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "grand-piano-101",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "grand-piano-101",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 18,
+      "filename": "sample_18_horse.jpg",
+      "ground_truth": "horse",
+      "efficientnet_b4": {
+        "prediction": "horse",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "horse",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "horse",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "horse",
+        "confidence_pct": 100.0
+      }
+    },
+    {
+      "sample_id": 19,
+      "filename": "sample_19_hummingbird.jpg",
+      "ground_truth": "hummingbird",
+      "efficientnet_b4": {
+        "prediction": "hummingbird",
+        "confidence_pct": 99.99,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "hummingbird",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "hummingbird",
+        "confidence_pct": 73.74,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "hummingbird",
+        "confidence_pct": 99.99
+      }
+    },
+    {
+      "sample_id": 20,
+      "filename": "sample_20_zebra.jpg",
+      "ground_truth": "zebra",
+      "efficientnet_b4": {
+        "prediction": "zebra",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "mobilenet_v3_large": {
+        "prediction": "zebra",
+        "correct": true
+      },
+      "soft_voting_ensemble": {
+        "prediction": "zebra",
+        "confidence_pct": 100.0,
+        "correct": true
+      },
+      "onnx_runtime_fp32": {
+        "prediction": "zebra",
+        "confidence_pct": 100.0
+      }
+    }
+  ]
+}

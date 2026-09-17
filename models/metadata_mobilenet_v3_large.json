@@ -1,0 +1,9 @@
+{
+  "backbone": "mobilenet_v3_large",
+  "timestamp": 1789589576,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.8349514563106796,
+  "val_f1": 0.8325509012698717,
+  "train_loss": 0.005250021837265143
+}

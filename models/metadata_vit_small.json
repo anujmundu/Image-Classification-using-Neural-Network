@@ -1,0 +1,9 @@
+{
+  "backbone": "vit_small",
+  "timestamp": 1789518745,
+  "num_classes": 50,
+  "epochs": 20,
+  "val_accuracy": 0.3828016643550624,
+  "val_f1": 0.38024044235541027,
+  "train_loss": 0.8644605832842162
+}

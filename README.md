@@ -9,6 +9,7 @@
 [![ONNX Runtime](https://img.shields.io/badge/ONNX%20Runtime-3.01x%20Accelerated-005CED.svg?logo=onnx&logoColor=white)](https://onnxruntime.ai/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-Production%20Microservice-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Interactive%20Arena-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=anujmundu/Image-Classification-using-Neural-Network&branch=main&mainModule=streamlit_app.py)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg?logo=docker&logoColor=white)](Dockerfile)
 [![Tests Passing](https://img.shields.io/badge/Tests-13%2F13%20Passing-brightgreen.svg?logo=pytest&logoColor=white)](tests/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)

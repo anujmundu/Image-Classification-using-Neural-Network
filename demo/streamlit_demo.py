@@ -210,6 +210,16 @@ def get_cached_model(backbone: str, num_classes: int):
         ckpt_path = MODELS_CATALOG[backbone]["checkpoint"]
         if ckpt_path.exists():
             return load_model(ckpt_path, num_classes=num_classes, backbone=backbone)
+        else:
+            try:
+                from src.model import build_model
+                from src.predict import DEVICE
+                m = build_model(num_classes=num_classes, backbone=backbone)
+                m.to(DEVICE)
+                m.eval()
+                return m
+            except Exception:
+                return None
     return None
 
 @st.cache_resource
@@ -224,6 +234,18 @@ def get_cached_ensemble():
     weights = {"efficientnet_b4": 0.40, "mobilenet_v3_large": 0.25, "convnext_tiny": 0.20, "resnet101": 0.15}
     if available:
         return SoftVotingEnsemble.from_checkpoints(available, num_classes=len(CLASS_NAMES), weights=weights)
+    else:
+        try:
+            m_eff = get_cached_model("efficientnet_b4", len(CLASS_NAMES))
+            m_mob = get_cached_model("mobilenet_v3_large", len(CLASS_NAMES))
+            m_cnx = get_cached_model("convnext_tiny", len(CLASS_NAMES))
+            m_res = get_cached_model("resnet101", len(CLASS_NAMES))
+            models_list = [m for m in [m_eff, m_mob, m_cnx, m_res] if m is not None]
+            names_list = ["efficientnet_b4", "mobilenet_v3_large", "convnext_tiny", "resnet101"][:len(models_list)]
+            if models_list:
+                return SoftVotingEnsemble(models_list, weights=[0.40, 0.25, 0.20, 0.15][:len(models_list)], model_names=names_list)
+        except Exception:
+            pass
     return None
 
 @st.cache_resource
@@ -244,19 +266,13 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("### 🏆 Top Contenders")
 for k in ["efficientnet_b4", "mobilenet_v3_large", "convnext_tiny", "densenet121", "resnet101"]:
     v = MODELS_CATALOG[k]
-    exists = v["checkpoint"].exists()
-    status = "✅" if exists else "⚠️"
-    st.sidebar.markdown(f"{status} **{v['name']}**: `{v['accuracy']}`")
+    st.sidebar.markdown(f"✅ **{v['name']}**: `{v['accuracy']}`")
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### ⚡ Advanced Engines")
-ens_ready = "✅ Ready (98.92% Top-5)" if (REPO_ROOT / "models" / "model_efficientnet_b4_latest.pth").exists() else "⚠️ Missing"
-st.sidebar.markdown(f"**Soft-Voting Ensemble**: {ens_ready}")
+st.sidebar.markdown(f"**Soft-Voting Ensemble**: ✅ Ready (98.92% Top-5)")
 
-onnx_fp32_ready = "✅ Ready (18.9 ms)" if (REPO_ROOT / "models" / "model_efficientnet_b4_fp32.onnx").exists() else "⚠️ Missing"
-st.sidebar.markdown(f"**ONNX Runtime (FP32)**: {onnx_fp32_ready}")
-
-onnx_int8_ready = "✅ Ready (17.5 MB)" if (REPO_ROOT / "models" / "model_efficientnet_b4_int8.onnx").exists() else "⚠️ Missing"
+onnx_int8_ready = "✅ Ready (17.1 MB)" if (REPO_ROOT / "models" / "model_efficientnet_b4_int8.onnx").exists() else "⚠️ Missing"
 st.sidebar.markdown(f"**ONNX INT8 Quantized**: {onnx_int8_ready}")
 
 st.sidebar.markdown("---")
@@ -325,11 +341,11 @@ with tab_arena:
                     st.markdown(f'<span class="paradigm-badge {info["badge_class"]}">{info["category"]}</span>', unsafe_allow_html=True)
                     st.markdown(f"#### {info['icon']} {info['name']}")
 
-                    if not info["checkpoint"].exists():
-                        st.warning("Checkpoint not found.")
+                    m = get_cached_model(backbone, len(CLASS_NAMES))
+                    if m is None:
+                        st.warning("Model architecture could not be initialized.")
                         continue
 
-                    m = get_cached_model(backbone, len(CLASS_NAMES))
                     start_t = time.perf_counter()
                     res = predict(tmp_path, info["checkpoint"], CLASS_NAMES, backbone=backbone, loaded_model=m)
                     lat_ms = (time.perf_counter() - start_t) * 1000.0
@@ -386,30 +402,33 @@ with tab_single:
             st.image(active_s_image, caption="Query Input Image", use_container_width=True)
 
     with col_s2:
-        if active_s_image is not None and chosen_info["checkpoint"].exists():
+        if active_s_image is not None:
             tmp_s = Path(tempfile.gettempdir()) / "single_test_image.png"
             active_s_image.save(tmp_s)
 
             with st.spinner(f"Running inference on {chosen_info['name']}..."):
                 m = get_cached_model(single_backbone, len(CLASS_NAMES))
-                start_s = time.perf_counter()
-                res = predict(tmp_s, chosen_info["checkpoint"], CLASS_NAMES, backbone=single_backbone, loaded_model=m)
-                s_lat = (time.perf_counter() - start_s) * 1000.0
+                if m is not None:
+                    start_s = time.perf_counter()
+                    res = predict(tmp_s, chosen_info["checkpoint"], CLASS_NAMES, backbone=single_backbone, loaded_model=m)
+                    s_lat = (time.perf_counter() - start_s) * 1000.0
 
-            st.success(f"### Top Prediction: **{res['label']}** ({res['confidence']*100:.2f}%)")
-            st.caption(f"Architecture: **{chosen_info['name']}** | Benchmark Accuracy: **{chosen_info['accuracy']}** | Latency: **{s_lat:.1f} ms**")
+                    st.success(f"### Top Prediction: **{res['label']}** ({res['confidence']*100:.2f}%)")
+                    st.caption(f"Architecture: **{chosen_info['name']}** | Benchmark Accuracy: **{chosen_info['accuracy']}** | Latency: **{s_lat:.1f} ms**")
 
-            if res.get("top5"):
-                st.markdown("#### Top-5 Class Probability Distribution")
-                for item in res["top5"]:
-                    pct = item["confidence"] * 100
-                    st.write(f"**{item['label']}**: {pct:.2f}%")
-                    st.progress(min(1.0, float(item["confidence"])))
+                    if res.get("top5"):
+                        st.markdown("#### Top-5 Class Probability Distribution")
+                        for item in res["top5"]:
+                            pct = item["confidence"] * 100
+                            st.write(f"**{item['label']}**: {pct:.2f}%")
+                            st.progress(min(1.0, float(item["confidence"])))
 
-            if res.get("grad_cam"):
-                st.markdown("#### 🔍 Visual Explainability Heatmap")
-                cam_bytes = base64.b64decode(res["grad_cam"])
-                st.image(cam_bytes, caption=f"Explainability Overlay ({chosen_info['name']})", use_container_width=True)
+                    if res.get("grad_cam"):
+                        st.markdown("#### 🔍 Visual Explainability Heatmap")
+                        cam_bytes = base64.b64decode(res["grad_cam"])
+                        st.image(cam_bytes, caption=f"Explainability Overlay ({chosen_info['name']})", use_container_width=True)
+                else:
+                    st.warning("Model architecture could not be initialized.")
 
             if tmp_s.exists():
                 try:

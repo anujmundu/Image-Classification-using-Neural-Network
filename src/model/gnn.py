@@ -1,6 +1,12 @@
 import torch
 import torch.nn as nn
-from torch_geometric.nn import GCNConv, global_mean_pool
+try:
+    from torch_geometric.nn import GCNConv, global_mean_pool
+    HAS_TORCH_GEOMETRIC = True
+except ImportError:
+    HAS_TORCH_GEOMETRIC = False
+    GCNConv = None
+    global_mean_pool = None
 
 def build_gnn(num_classes: int = 10, in_channels: int = 3, hidden_channels: int = 64, **kwargs) -> nn.Module:
     """Simple Graph Convolutional Network for super‑pixel graph data.
